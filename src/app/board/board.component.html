@@ -1,0 +1,6 @@
+<div>
+  <div class="row" *ngFor="let row of boardValues">
+    <app-square *ngFor="let item of row" [val]="item">
+    </app-square>
+  </div>
+</div>

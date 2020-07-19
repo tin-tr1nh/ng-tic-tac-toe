@@ -5,9 +5,9 @@ type SquareValue = 'X' | 'O';
 @Component({
   selector: 'app-square',
   template: `
-    <p>
+    <span>
       {{ val }}
-    </p>
+    </span>
   `,
   styles: [],
 })
