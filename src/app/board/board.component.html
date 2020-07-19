@@ -1,6 +1,16 @@
-<div>
-  <div class="row" *ngFor="let row of boardValues">
-    <app-square *ngFor="let item of row" [val]="item">
-    </app-square>
-  </div>
+<h1>Current player {{player}}</h1>
+
+
+<div *ngIf="winner">
+  The winner is {{winner}}
 </div>
+
+<button nbButton outline (click)="newGame()">New Game</button>
+
+<p></p>
+
+
+<main>
+  <app-square *ngFor="let item of boardValues; let i = index" [val]="item" (click)="makeMove(i)">
+  </app-square>
+</main>
